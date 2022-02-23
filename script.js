@@ -1,9 +1,15 @@
 $.ajax({
     url: "https://anime-facts-rest-api.herokuapp.com/api/v1",
-    success: function (data) {
-        console.log(data);
+}).then(
+    (data) => {
+        $('#name').html(data);
+        console.log(data)
     },
-    error: function (error) {
+    (error) => {
         console.log("bad request: ", error);
-    },
-});
+    }
+);
+
+
+
+
