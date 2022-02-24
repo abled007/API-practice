@@ -4,8 +4,11 @@ $('form').on('submit', (event) => {
         url: "https://anime-facts-rest-api.herokuapp.com/api/v1",
     }).then(
         (data) => {
-            $('#name').html(data)
-            console.log(data);
+            const randomNumber = Math.floor(Math.random() * 12)
+            const apiData = data.data[`${randomNumber}`];
+            $('body').find('#name').html(apiData.anime_name)
+            $('#img').attr('src', apiData.anime_img)
+            console.log(apiData.anime_name)
         },
         (error) => {
             console.log("bad request: ", error);
@@ -18,13 +21,13 @@ $('form').on('submit', (event) => {
 async function getQuote(e) {
     e.preventDefault();
 
-    const quote = fetch('https://animechan.vercel.app/api/random')
+    fetch('https://animechan.vercel.app/api/random')
             .then(response => response.json())
             .then(quote => console.log(quote))
             
-    $('#name').html(quote);
+    
 }
-$("form").on("submit", getQuote);
+$('body').find('#quote').html(getQuote)
 
 
 
