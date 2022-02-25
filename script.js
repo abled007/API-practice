@@ -8,7 +8,7 @@ $('form').on('submit', (event) => {
             const apiData = data.data[`${randomNumber}`];
             $('body').find('#name').html(apiData.anime_name)
             $('#img').attr('src', apiData.anime_img)
-            console.log(apiData.anime_name)
+            console.log(apiData)
         },
         (error) => {
             console.log("bad request: ", error);
@@ -17,19 +17,31 @@ $('form').on('submit', (event) => {
 })
 
 // random fact 
-
-async function getQuote(e) {
-    e.preventDefault();
-
-    fetch('https://animechan.vercel.app/api/random')
-            .then(response => response.json())
-            .then(quote => console.log(quote))
-            
     
-}
-$('body').find('#quote').html(getQuote)
+    // $('form').on('submit', (event) => {
+    //     event.preventDefault();
+    //     fetch('https://animechan.vercel.app/api/random')
+    //         .then(response => response.json())
+    //         .then(quote => {
+    //             $('body').find('#quote').html(quote);
+    //             console.log(quote)
+    //         })
+    // })
 
 
 
-
+    async function getData(e) {
+        e.preventDefault();
+    
+        const url = 'https://animechan.vercel.app/api/random'
+        const response = await fetch(url);
+        const data = await response.json();
+    
+        $("#anime").html(data.anime);
+        $("#character").html(data.character);
+        $("#quote").html(data.quote);
+        console.log(data)
+    }
+    
+    $("form").on("submit", getData);
 
