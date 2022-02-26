@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -13,16 +16,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-   <h1>World of Anime!</h1>
+   <h1>World of <span>Anime!</span></h1>
+   <form id="myForm">
+       <input type="submit" value="Get Show" />
+   </form>
    <dl>
        <dt>Name</dt>
        <dd id="name"></dd>
        <dt>Image</dt>
        <img id="img">
    </dl>
-   <form>
-       <input type="submit" value="Get Show" />
-   </form>
 
    <dl>
        <dt>Random Quote</dt>
@@ -30,8 +33,9 @@
        <dd id="character"></dd>
        <dd id="quote"></dd>
     </dl>
-   
-    <button type="submit" value="Get Quote">Get Quote</button>
+   <form id="form">
+       <button type="submit" value="Get Quote">Get Quote</button>
+   </form>
     
 
 </body>
