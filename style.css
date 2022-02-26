@@ -1,3 +1,76 @@
-h1 {
-    font-family: 'Noto Serif JP', serif;
+body {
+    background-image: url("/Users/audreybledsoe/Downloads/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
+
+div.transbox {
+    margin: 10px;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    position: absolute;
+    height: auto;
+    width: auto;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 30px;
+}
+
+input {
+    margin: 15px;
+    color: #1D9AF2;
+    background-color: #292D3E;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+input:hover {
+    box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+    transform: translateX(-3px);
+}
+
+dt, dd {
+    text-align: center;
+    margin: 15px;
+}
+
+dt {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+dd {
+    font-size: 40px;
+}
+
+img {
+    display: block;
+    margin: 15px auto;
+}
+
+button {
+    margin: 15px;
+    color: #1D9AF2;
+    background-color: #292D3E;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+ }
+ button:hover {
+   box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+   transform: translateX(-3px);
+ }
+
